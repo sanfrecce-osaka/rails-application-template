@@ -1,0 +1,3 @@
+database:
+  username: project-name
+  password: <%= ENV['PROJECT-NAME_DATABASE_PASSWORD'] %>
