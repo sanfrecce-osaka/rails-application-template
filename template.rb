@@ -5,6 +5,9 @@ remove_file 'Gemfile'
 copy_file 'Gemfile', 'Gemfile'
 run 'bundle install --path vendor/bundle'
 
+# database
+copy_file 'config/database.yml', 'config/database.yml', force: true
+
 # rspec
 generate 'rspec:install'
 copy_file 'spec/rails_helper.rb', 'spec/rails_helper.rb', force: true
