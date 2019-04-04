@@ -15,6 +15,7 @@ copy_file 'rspec', '.rspec', force: true
 copy_file 'bin/rspec-queue', 'bin/rspec-queue'
 
 # webpacker
+copy_file 'config/webpacker.yml', 'config/webpacker.yml'
 run 'bundle exec rails webpacker:install'
 
 # bootstrap
