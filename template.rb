@@ -5,6 +5,9 @@ remove_file 'Gemfile'
 copy_file 'Gemfile', 'Gemfile'
 run 'bundle install --path vendor/bundle'
 
+# assets
+copy_file 'app/assets/javascripts/application.js', 'app/assets/javascripts/application.js', force: true
+
 # database
 copy_file 'config/database.yml', 'config/database.yml', force: true
 
