@@ -14,6 +14,9 @@ copy_file 'spec/rails_helper.rb', 'spec/rails_helper.rb', force: true
 copy_file 'rspec', '.rspec', force: true
 copy_file 'bin/rspec-queue', 'bin/rspec-queue'
 
+# webpack
+run 'yarn add webpack'
+
 # webpacker
 copy_file 'config/webpacker.yml', 'config/webpacker.yml'
 run 'bundle exec rails webpacker:install'
