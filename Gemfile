@@ -60,3 +60,4 @@ gem 'config'
 gem 'haml-rails'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'devise'
+gem 'bootsnap', require: false
