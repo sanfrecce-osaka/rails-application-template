@@ -41,7 +41,7 @@ copy_file 'Guardfile', 'Guardfile'
 
 # spring
 run 'bin/spring stop'
-run 'spring binstub --all'
+run 'bundle exec spring binstub --all'
 
 # bullet
 copy_file 'config/environments/development.rb', 'config/environments/development.rb', force: true
