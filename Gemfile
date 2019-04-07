@@ -58,6 +58,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'config'
 gem 'haml-rails'
-gem 'webpacker', github: 'rails/webpacker'
+gem 'webpacker', '~> 4.x'
 gem 'devise'
 gem 'bootsnap', require: false
