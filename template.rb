@@ -16,11 +16,7 @@ copy_file 'spec/rails_helper.rb', 'spec/rails_helper.rb', force: true
 copy_file 'rspec', '.rspec', force: true
 copy_file 'bin/rspec-queue', 'bin/rspec-queue'
 
-# webpack
-run 'yarn add webpack'
-
 # webpacker
-copy_file 'config/webpacker.yml', 'config/webpacker.yml'
 run 'bundle exec rails webpacker:install'
 
 # bootstrap
@@ -31,7 +27,9 @@ remove_file 'app/views/layouts/application.html.erb'
 copy_file 'app/views/layouts/application.html.haml', 'app/views/layouts/application.html.haml'
 run 'yarn add jquery'
 run 'yarn add popper.js'
-copy_file 'config/webpack/environment.js', 'config/webpack/environment.js', force: true
+
+# webpacker:compile
+run 'rails webpacker:compile'
 
 # config
 generate 'config:install'
