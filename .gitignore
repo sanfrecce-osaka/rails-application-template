@@ -13,9 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
 /yarn-error.log
-
 .byebug_history
 .idea/
 /vendor/*
@@ -25,6 +23,5 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 /public/packs
 /public/packs-test
-/node_modules
 yarn-debug.log*
 .yarn-integrity
