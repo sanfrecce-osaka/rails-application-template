@@ -1,6 +1,5 @@
 git :init
 source_paths.unshift(File.dirname(__FILE__))
-copy_file 'gitignore', '.gitignore', force: true
 remove_file 'Gemfile'
 copy_file 'Gemfile', 'Gemfile'
 run 'bundle install --path vendor/bundle'
@@ -57,6 +56,9 @@ copy_file 'pryrc', '.pryrc'
 copy_file 'rubocop.yml', '.rubocop.yml', force: true
 copy_file 'lib/tasks/add_frozen_string_literal.rake', 'lib/tasks/add_frozen_string_literal.rake'
 rake 'rubocop:add_frozen_string_literal'
+
+# gitignore
+copy_file 'gitignore', '.gitignore', force: true
 
 git add: '.'
 git commit: "-a -m 'Initial commit'"
