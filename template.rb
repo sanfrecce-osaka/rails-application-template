@@ -59,7 +59,30 @@ rake 'rubocop:add_frozen_string_literal'
 copy_file 'gitignore', '.gitignore', force: true
 
 # application.rb
-copy_file 'config/application.rb', 'config/application.rb', force: true
+environment <<~SETTING
+  config.time_zone = 'Tokyo'
+
+  config.i18n.default_locale = :ja
+
+  config.generators.system_tests = nil
+
+  config.generators do |g|
+    g.stylesheets false
+    g.javascripts false
+    g.helper false
+    g.skip_routes = true
+    g.template_engine :haml
+    g.test_framework :rspec,
+                     fixtures: true,
+                     view_specs: false,
+                     helper_specs: false,
+                     routing_specs: false,
+                     controller_specs: false,
+                     request_specs: true
+    g.fixture_replacement :factory_bot, dir: 'spec/factories'
+  end
+
+SETTING
 
 git add: '.'
 git commit: "-a -m 'Initial commit'"
