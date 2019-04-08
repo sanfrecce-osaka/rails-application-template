@@ -58,5 +58,8 @@ rake 'rubocop:add_frozen_string_literal'
 # gitignore
 copy_file 'gitignore', '.gitignore', force: true
 
+# application.rb
+copy_file 'config/application.rb', 'config/application.rb', force: true
+
 git add: '.'
 git commit: "-a -m 'Initial commit'"
