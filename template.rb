@@ -33,7 +33,6 @@ run 'rails webpacker:compile'
 
 # config
 generate 'config:install'
-copy_file 'config/settings/production.yml', 'config/settings/production.yml', force: true
 copy_file 'config/settings.local.yml', 'config/settings.local.yml', force: true
 
 # guard-livereload
