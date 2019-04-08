@@ -83,4 +83,5 @@ test:
 production:
   <<: *default
   database: <%= Rails.application.class.parent_name.underscore.gsub('_', '-') %>_production
+  username: <%= Rails.application.class.parent_name.underscore.gsub('_', '-') %>
   password: <%= Settings.database.password %>
