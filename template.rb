@@ -84,5 +84,8 @@ environment <<~SETTING
 
 SETTING
 
+# rubocop auto-correct
+run 'bundle exec rubocop --safe-auto-correct'
+
 git add: '.'
 git commit: "-a -m 'Initial commit'"
