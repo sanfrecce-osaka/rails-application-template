@@ -18,6 +18,7 @@ copy_file 'bin/rspec-queue', 'bin/rspec-queue'
 
 # webpacker
 run 'bundle exec rails webpacker:install'
+copy_file 'config/webpack/environment.js', 'config/webpack/environment.js', force: true
 
 # bootstrap
 run 'yarn add bootstrap'
