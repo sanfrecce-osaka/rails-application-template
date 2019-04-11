@@ -12,7 +12,7 @@ ruby "#{RUBY_VERSION}"
 gem 'rails'
 gem 'pg'
 gem 'puma'
-gem 'sass-rails'
+gem 'sassc-rails'
 
 gem 'jbuilder'
 # gem 'redis', '~> 4.0'
