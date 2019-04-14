@@ -34,7 +34,6 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
-  gem 'rails-erd'
 end
 
 group :development do
@@ -46,6 +45,7 @@ group :development do
   gem 'bullet'
   gem 'rubocop', require: false
   gem 'guard-livereload', require: false
+  gem 'erd'
 end
 
 group :test do
